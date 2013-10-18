@@ -1,9 +1,11 @@
+#include <config.h>
+#include <globals.h>
+
 #include <dynamiclib.h>
 
 /* System Headers */
 
 /* Local Headers */
-#include "globals.h"
 
 namespace MCServer {
 

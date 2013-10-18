@@ -81,7 +81,8 @@ DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(top_srcdir)/configure $(am__configure_deps) \
 	$(srcdir)/config.h.in COPYING depcomp install-sh missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_jni_include_dir.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -189,18 +190,18 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/josh/code/mcserver/missing aclocal-1.13
+ACLOCAL = ${SHELL} /home/SHARE_ONE/jwilliams/code/mcserver/missing aclocal-1.13
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/josh/code/mcserver/missing autoconf
-AUTOHEADER = ${SHELL} /home/josh/code/mcserver/missing autoheader
-AUTOMAKE = ${SHELL} /home/josh/code/mcserver/missing automake-1.13
+AUTOCONF = ${SHELL} /home/SHARE_ONE/jwilliams/code/mcserver/missing autoconf
+AUTOHEADER = ${SHELL} /home/SHARE_ONE/jwilliams/code/mcserver/missing autoheader
+AUTOMAKE = ${SHELL} /home/SHARE_ONE/jwilliams/code/mcserver/missing automake-1.13
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS =  -I/etc/java-config-2/current-system-vm/include -I/etc/java-config-2/current-system-vm/include/linux
 CXX = g++
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
@@ -222,7 +223,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -ldl 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/josh/code/mcserver/missing makeinfo
+MAKEINFO = ${SHELL} /home/SHARE_ONE/jwilliams/code/mcserver/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = mcserver
@@ -237,10 +238,11 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = 
 VERSION = 0.1.0
-abs_builddir = /home/josh/code/mcserver
-abs_srcdir = /home/josh/code/mcserver
-abs_top_builddir = /home/josh/code/mcserver
-abs_top_srcdir = /home/josh/code/mcserver
+_ACJNI_JAVAC = 
+abs_builddir = /home/SHARE_ONE/jwilliams/code/mcserver
+abs_srcdir = /home/SHARE_ONE/jwilliams/code/mcserver
+abs_top_builddir = /home/SHARE_ONE/jwilliams/code/mcserver
+abs_top_srcdir = /home/SHARE_ONE/jwilliams/code/mcserver
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -260,7 +262,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/josh/code/mcserver/install-sh
+install_sh = ${SHELL} /home/SHARE_ONE/jwilliams/code/mcserver/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
